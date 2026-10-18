@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" width="960" height="520" role="img" aria-label="FastScape regular grid built from the ASPECT box extent, with one ring of ghost nodes outside the ASPECT boundary">
+<style>text{font-family:Calibri,"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif}</style>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#5A6470"/></marker></defs>
+<rect width="960" height="520" rx="16" fill="#F7F6F2"/>
+
+<text x="300" y="44" text-anchor="middle" font-size="22" font-weight="700" fill="#C9545C">FastScape grid · fixed, regular, one ghost ring</text>
+
+<!-- ghost ring extent -->
+<rect x="80" y="80" width="440" height="300" fill="#FBE9EB" stroke="#C9545C" stroke-width="1.5" stroke-dasharray="6 4"/>
+<!-- ASPECT top-surface extent -->
+<rect x="120" y="110" width="360" height="240" fill="#ECECF9" stroke="#5B5FC7" stroke-width="2.5"/>
+<!-- grid lines (dx = 40) -->
+<g stroke="#E6B8BC" stroke-width="1">
+<path d="M80 110 H520 M80 140 H520 M80 170 H520 M80 200 H520 M80 230 H520 M80 260 H520 M80 290 H520 M80 320 H520 M80 350 H520"/>
+<path d="M120 80 V380 M160 80 V380 M200 80 V380 M240 80 V380 M280 80 V380 M320 80 V380 M360 80 V380 M400 80 V380 M440 80 V380 M480 80 V380"/>
+</g>
+<!-- nodes -->
+<g fill="#C9545C">
+<g id="row"><circle cx="120" cy="110" r="3.2"/><circle cx="160" cy="110" r="3.2"/><circle cx="200" cy="110" r="3.2"/><circle cx="240" cy="110" r="3.2"/><circle cx="280" cy="110" r="3.2"/><circle cx="320" cy="110" r="3.2"/><circle cx="360" cy="110" r="3.2"/><circle cx="400" cy="110" r="3.2"/><circle cx="440" cy="110" r="3.2"/><circle cx="480" cy="110" r="3.2"/></g>
+<use href="#row" y="30"/><use href="#row" y="60"/><use href="#row" y="90"/><use href="#row" y="120"/><use href="#row" y="150"/><use href="#row" y="180"/><use href="#row" y="210"/><use href="#row" y="240"/>
+</g>
+<!-- ghost nodes hollow -->
+<g fill="#FFFFFF" stroke="#C9545C" stroke-width="1.5">
+<g id="grow"><circle cx="80" cy="80" r="3.2"/><circle cx="120" cy="80" r="3.2"/><circle cx="160" cy="80" r="3.2"/><circle cx="200" cy="80" r="3.2"/><circle cx="240" cy="80" r="3.2"/><circle cx="280" cy="80" r="3.2"/><circle cx="320" cy="80" r="3.2"/><circle cx="360" cy="80" r="3.2"/><circle cx="400" cy="80" r="3.2"/><circle cx="440" cy="80" r="3.2"/><circle cx="480" cy="80" r="3.2"/><circle cx="520" cy="80" r="3.2"/></g>
+<use href="#grow" y="300"/>
+<g id="gcol"><circle cx="80" cy="110" r="3.2"/><circle cx="80" cy="140" r="3.2"/><circle cx="80" cy="170" r="3.2"/><circle cx="80" cy="200" r="3.2"/><circle cx="80" cy="230" r="3.2"/><circle cx="80" cy="260" r="3.2"/><circle cx="80" cy="290" r="3.2"/><circle cx="80" cy="320" r="3.2"/><circle cx="80" cy="350" r="3.2"/></g>
+<use href="#gcol" x="440"/>
+</g>
+<!-- labels on figure -->
+<rect x="150" y="214" width="300" height="56" rx="8" fill="#ECECF9" opacity="0.92"/>
+<text x="300" y="235" text-anchor="middle" font-size="20" font-weight="700" fill="#5B5FC7">ASPECT top boundary</text>
+<text x="300" y="260" text-anchor="middle" font-size="15" fill="#5B5FC7">nodes filled from ASPECT face corners (index match)</text>
+<text x="300" y="404" text-anchor="middle" font-size="15" fill="#C9545C">ghost ring: FastScape BC (fixed / open / periodic) is applied here, not on the ASPECT edge</text>
+
+<!-- dx annotation -->
+<path d="M120 440 H160" stroke="#5A6470" stroke-width="1.5" marker-end="url(#ar)"/>
+<path d="M160 440 H120" stroke="#5A6470" stroke-width="1.5" marker-end="url(#ar)"/>
+<text x="80" y="462" font-size="14" fill="#5A6470">dx = L / (2^(ref) × repetitions)</text>
+<text x="80" y="480" font-size="13" fill="#8A93A0">ref = max surface refinement + additional FastScape refinement</text>
+
+<!-- right-hand text -->
+<g font-size="15" fill="#1B2430">
+<text x="560" y="96" font-size="17" font-weight="700" fill="#C9545C">How ghost nodes are set (v2.6.0-pre, same in v3.0.0)</text>
+<text x="560" y="126" font-weight="700">At initialization</text>
+<text x="575" y="148" fill="#4A5563">h_ghost = h of the inner neighbour</text>
+<text x="575" y="168" fill="#4A5563">(or the erosional base level if that option is on)</text>
+<text x="560" y="200" font-weight="700">Every FastScape sub-step</text>
+<text x="575" y="222" fill="#4A5563">vx, vy, vz of a ghost node = its inner neighbour's values</text>
+<text x="575" y="242" fill="#4A5563">h is not re-synchronized; the FastScape BC acts on the ring</text>
+<text x="560" y="274" font-weight="700">Back to ASPECT</text>
+<text x="575" y="296" fill="#4A5563">the outer ring is ignored; only the inner grid is interpolated</text>
+<text x="575" y="316" fill="#4A5563">onto the ASPECT top boundary</text>
+<text x="560" y="348" font-weight="700">Why</text>
+<text x="575" y="370" fill="#4A5563">a fixed-elevation FastScape boundary placed exactly on the</text>
+<text x="575" y="390" fill="#4A5563">ASPECT edge pins that edge and carves artificial incision there;</text>
+<text x="575" y="410" fill="#4A5563">one extra ring moves the pin one cell outward</text>
+<text x="560" y="446" font-size="13" fill="#8A93A0">Later ASPECT versions (main, 2025+) additionally pull h_ghost toward</text>
+<text x="560" y="464" font-size="13" fill="#8A93A0">h_neighbour through an extra vz term.</text>
+</g>
+</svg>

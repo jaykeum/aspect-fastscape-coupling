@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Side by side comparison of the ASPECT-FastScape and DES3D-goSPL coupling schemes">
+<style>text{font-family:Calibri,"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif}</style>
+<defs><marker id="ar2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#5A6470"/></marker></defs>
+<rect width="960" height="560" rx="16" fill="#F7F6F2"/>
+
+<text x="250" y="42" text-anchor="middle" font-size="24" font-weight="700" fill="#5B5FC7">ASPECT + FastScape</text>
+<text x="710" y="42" text-anchor="middle" font-size="24" font-weight="700" fill="#2F6FB0">DES3D + goSPL</text>
+<line x1="480" y1="20" x2="480" y2="540" stroke="#D3D8DE" stroke-width="1.5" stroke-dasharray="6 5"/>
+
+<!-- LEFT: Eulerian box -->
+<g>
+<path d="M60 220 L60 92 C150 92 190 60 250 60 C310 60 350 92 440 92 L440 220 Z" fill="#ECECF9" stroke="#5B5FC7" stroke-width="2"/>
+<rect x="60" y="70" width="380" height="150" fill="none" stroke="#B5BCC5" stroke-width="1" stroke-dasharray="4 4"/>
+<!-- fixed box edges emphasised -->
+<path d="M60 92 V220 M440 92 V220" stroke="#5B5FC7" stroke-width="4"/>
+<path d="M60 130 H440 M60 160 H440 M60 190 H440 M100 70 V220 M140 70 V220 M180 70 V220 M220 70 V220 M260 70 V220 M300 70 V220 M340 70 V220 M380 70 V220 M420 70 V220" stroke="#B9BBE8" stroke-width="1"/>
+<!-- deformed top surface -->
+<path d="M60 92 C150 92 190 60 250 60 C310 60 350 92 440 92" fill="none" stroke="#5B5FC7" stroke-width="3"/>
+<text x="250" y="84" text-anchor="middle" font-size="12" fill="#8A93A0">dashed: initial box</text>
+<!-- outflow arrows at sides -->
+<path d="M58 140 L30 140" stroke="#5A6470" stroke-width="2" marker-end="url(#ar2)"/>
+<path d="M442 140 L470 140" stroke="#5A6470" stroke-width="2" marker-end="url(#ar2)"/>
+<text x="250" y="245" text-anchor="middle" font-size="15" fill="#4A5563">box edges stay put; material flows out through the sides</text>
+<text x="250" y="265" text-anchor="middle" font-size="15" fill="#4A5563">top boundary moves only vertically (mesh velocity, z only)</text>
+</g>
+<!-- RIGHT: Lagrangian mesh widening -->
+<g>
+<rect x="520" y="70" width="380" height="150" fill="none" stroke="#B5BCC5" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="540" y="212" font-size="12" fill="#8A93A0">dashed: padded goSPL mesh</text>
+<path d="M560 220 L560 92 C640 92 680 60 710 60 C740 60 780 92 860 92 L860 220 Z" fill="#EAF1F8" stroke="#2F6FB0" stroke-width="2"/>
+<path d="M560 130 L860 130 M560 170 L860 170 M600 220 L605 90 M650 220 L655 75 M700 220 L703 62 M750 220 L748 64 M800 220 L805 85" stroke="#B7CDE3" stroke-width="1"/>
+<path d="M560 140 L535 140" stroke="#2F6FB0" stroke-width="2" marker-end="url(#ar2)"/>
+<path d="M860 140 L885 140" stroke="#2F6FB0" stroke-width="2" marker-end="url(#ar2)"/>
+<text x="710" y="245" text-anchor="middle" font-size="15" fill="#4A5563">nodes carry the material; the whole mesh widens and remeshes</text>
+<text x="710" y="265" text-anchor="middle" font-size="15" fill="#4A5563">goSPL mesh is fixed, so it needs padding around the initial surface</text>
+</g>
+
+<!-- comparison table -->
+<g font-size="16" fill="#1B2430">
+<g font-weight="700" fill="#5A6470">
+<text x="40" y="305">Tectonic mesh</text><text x="40" y="340">Surface grid</text><text x="40" y="375">Coupling cadence</text><text x="40" y="410">Velocity sent</text><text x="40" y="445">Returned quantity</text><text x="40" y="480">Lateral motion</text><text x="40" y="515">Boundary handling</text>
+</g>
+<g>
+<text x="200" y="305">Eulerian / ALE hexahedra (Q2-Q1)</text>
+<text x="200" y="340">regular, fixed, built from box extent</text>
+<text x="200" y="375">every ASPECT step; FastScape sub-steps</text>
+<text x="200" y="410">instantaneous (vx, vy, vz)</text>
+<text x="200" y="445">h_new → v_z = (h_new − h_old)/Δt (total)</text>
+<text x="200" y="480">advection inside FastScape (vx, vy)</text>
+<text x="200" y="515">one ghost ring; BC applied there</text>
+</g>
+<g>
+<text x="500" y="305">Lagrangian tetrahedra (P1), remeshing</text>
+<text x="500" y="340">unstructured, fixed, padded, perturbed</text>
+<text x="500" y="375">every N DES steps or every T years</text>
+<text x="500" y="410">time-averaged Δcoord / Δt</text>
+<text x="500" y="445">Δh = erosion + diffusion only (uplift removed)</text>
+<text x="500" y="480">nodes move; goSPL grid interpolates</text>
+<text x="500" y="515">padding fraction; letter BC (o / f / w)</text>
+</g>
+</g>
+<path d="M30 285 H930" stroke="#D3D8DE" stroke-width="1"/>
+</svg>

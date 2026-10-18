@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="960" height="360" role="img" aria-label="Time stepping: FastScape is called once per ASPECT time step and sub-steps inside it; the sub-step count doubles until it is below the maximum FastScape time step">
+<style>text{font-family:Calibri,"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif}</style>
+<rect width="960" height="360" rx="16" fill="#F7F6F2"/>
+<text x="50" y="44" font-size="20" fill="#4A5563"><tspan fill="#5B5FC7" font-weight="700">│</tspan> ASPECT step (adaptive Δt, so uneven)     <tspan fill="#C9545C">●</tspan> FastScape called     <tspan fill="#C9545C">|</tspan> FastScape sub-step</text>
+
+<text x="50" y="100" font-size="22" font-weight="700" fill="#1B2430">One FastScape call per ASPECT step (from step 1; step 0 is skipped)</text>
+<line x1="50" y1="150" x2="898" y2="150" stroke="#9AA3AE" stroke-width="3"/>
+<g stroke="#5B5FC7" stroke-width="2.5">
+<line x1="50" y1="138" x2="50" y2="162"/><line x1="170" y1="138" x2="170" y2="162"/><line x1="330" y1="138" x2="330" y2="162"/><line x1="430" y1="138" x2="430" y2="162"/><line x1="620" y1="138" x2="620" y2="162"/><line x1="760" y1="138" x2="760" y2="162"/><line x1="898" y1="138" x2="898" y2="162"/>
+</g>
+<g fill="#C9545C"><circle cx="170" cy="150" r="10"/><circle cx="330" cy="150" r="10"/><circle cx="430" cy="150" r="10"/><circle cx="620" cy="150" r="10"/><circle cx="760" cy="150" r="10"/><circle cx="898" cy="150" r="10"/></g>
+<text x="50" y="185" font-size="15" fill="#8A93A0">t = 0</text>
+<text x="110" y="185" font-size="15" fill="#5B5FC7" text-anchor="middle">step 1</text>
+<text x="250" y="185" font-size="15" fill="#5B5FC7" text-anchor="middle">step 2</text>
+<text x="380" y="185" font-size="15" fill="#5B5FC7" text-anchor="middle">step 3</text>
+<text x="525" y="185" font-size="15" fill="#5B5FC7" text-anchor="middle">step 4</text>
+<text x="690" y="185" font-size="15" fill="#5B5FC7" text-anchor="middle">step 5</text>
+<text x="829" y="185" font-size="15" fill="#5B5FC7" text-anchor="middle">step 6</text>
+
+<text x="50" y="240" font-size="22" font-weight="700" fill="#1B2430">Inside one call: sub-steps double until Δt_FS ≤ "Maximum timestep length"</text>
+<!-- zoom of step 4 -->
+<line x1="430" y1="290" x2="620" y2="290" stroke="#9AA3AE" stroke-width="3"/>
+<g stroke="#C9545C" stroke-width="2">
+<line x1="430" y1="280" x2="430" y2="300"/><line x1="453.75" y1="280" x2="453.75" y2="300"/><line x1="477.5" y1="280" x2="477.5" y2="300"/><line x1="501.25" y1="280" x2="501.25" y2="300"/><line x1="525" y1="280" x2="525" y2="300"/><line x1="548.75" y1="280" x2="548.75" y2="300"/><line x1="572.5" y1="280" x2="572.5" y2="300"/><line x1="596.25" y1="280" x2="596.25" y2="300"/><line x1="620" y1="280" x2="620" y2="300"/>
+</g>
+<path d="M430 162 L430 214 M430 250 L430 275 M620 162 L620 214 M620 250 L620 275" stroke="#C9545C" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="525" y="322" text-anchor="middle" font-size="15" fill="#C9545C">N = 8 sub-steps of Δt_ASPECT / 8</text>
+<text x="525" y="342" text-anchor="middle" font-size="13" fill="#C9545C">start from "Number of fastscape timesteps per aspect timestep", then N × 2 until Δt_FS is small enough</text>
+<text x="50" y="284" font-size="15" fill="#4A5563">Each sub-step: fastscape_execute_step()</text>
+<text x="50" y="304" font-size="15" fill="#4A5563">+ ghost nodes reset (if used)</text>
+<text x="680" y="284" font-size="15" fill="#4A5563">After the last sub-step: copy h,</text>
+<text x="680" y="304" font-size="15" fill="#4A5563">v_z = (h_new − h_old) / Δt_ASPECT</text>
+</svg>

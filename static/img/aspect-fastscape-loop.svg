@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-label="ASPECT-FastScape coupling loop: ASPECT solves one Stokes step, sends surface velocity, FastScape runs sub-steps, returns new topography, ASPECT converts it to a vertical mesh velocity">
+<style>
+text{font-family:Calibri,"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif}
+</style>
+<defs>
+<marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#B5BCC5"/></marker>
+<marker id="va" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0L10 5L0 10z" fill="#5B5FC7"/></marker>
+<clipPath id="clipA"><rect x="55" y="105" width="250" height="155"/></clipPath>
+</defs>
+<rect width="960" height="420" rx="16" fill="#F7F6F2"/>
+
+<!-- transfer arcs -->
+<path id="pTop" d="M330 130 C 450 40, 510 40, 630 130" fill="none" stroke="#D3D8DE" stroke-width="4" marker-end="url(#ab)"/>
+<path id="pBot" d="M630 240 C 510 330, 450 330, 330 240" fill="none" stroke="#D3D8DE" stroke-width="4" marker-end="url(#ab)"/>
+
+<text x="180" y="70" text-anchor="middle" font-size="30" font-weight="700" fill="#5B5FC7">ASPECT</text>
+<text x="780" y="70" text-anchor="middle" font-size="30" font-weight="700" fill="#C9545C">FastScape</text>
+
+<!-- ===== ASPECT box ===== -->
+<rect x="40" y="90" width="280" height="180" rx="14" fill="#ECECF9" stroke="#5B5FC7" stroke-width="2">
+<animate attributeName="stroke-width" values="5;2;2;2;5;5" keyTimes="0;0.2;0.4;0.6;0.8;1" calcMode="discrete" dur="12.5s" repeatCount="indefinite"/>
+</rect>
+<!-- crust block: top surface stays FLAT in scenes 1-4 (Eulerian mesh), deforms only in scene 5 -->
+<g clip-path="url(#clipA)">
+<path fill="#D5D6F3" stroke="#5B5FC7" stroke-width="2.5" d="M55 260 L55 160 L305 160 L305 260 Z">
+<animate attributeName="d" dur="12.5s" repeatCount="indefinite" keyTimes="0;0.8;0.86;1"
+ values="M55 260 L55 160 L305 160 L305 260 Z;
+ M55 260 L55 160 L305 160 L305 260 Z;
+ M55 260 L55 162 C120 162 135 134 165 134 L180 148 L195 134 C225 134 240 162 305 162 L305 260 Z;
+ M55 260 L55 162 C120 162 135 134 165 134 L180 148 L195 134 C225 134 240 162 305 162 L305 260 Z"/>
+</path>
+<!-- Eulerian mesh lines (fixed) -->
+<path d="M55 185 H305 M55 210 H305 M55 235 H305 M95 160 V260 M135 160 V260 M175 160 V260 M215 160 V260 M255 160 V260 M295 160 V260" stroke="#B9BBE8" stroke-width="1.2" opacity="0.9"/>
+<!-- sediment patch in the notch (scene 5) -->
+<path d="M165 134 L180 148 L195 134 L195 141 L180 150 L165 141 Z" fill="#E9A1A6" stroke="#C9545C" stroke-width="1" opacity="0">
+<animate attributeName="opacity" values="0;0;0;0;1;1" keyTimes="0;0.2;0.4;0.6;0.8;1" calcMode="discrete" dur="12.5s" repeatCount="indefinite"/>
+</path>
+</g>
+<!-- surface velocity arrows (scene 1): uplift in the centre, divergence outward -->
+<g opacity="0" stroke="#5B5FC7" stroke-width="2.2" fill="none" marker-end="url(#va)">
+<path d="M80 158 L72 150"/><path d="M115 158 L110 144"/><path d="M150 158 L149 136"/><path d="M180 158 L180 132"/><path d="M210 158 L211 136"/><path d="M245 158 L250 144"/><path d="M280 158 L288 150"/>
+<animate attributeName="opacity" values="1;0;0;0;0;0" keyTimes="0;0.2;0.4;0.6;0.8;1" calcMode="discrete" dur="12.5s" repeatCount="indefinite"/>
+</g>
+<!-- labels inside ASPECT box -->
+<text x="180" y="125" text-anchor="middle" font-size="18" font-weight="600" fill="#1B2430" opacity="0">Stokes solve → (vx, vy, vz) on top
+<animate attributeName="opacity" values="1;0;0;0;0;0" keyTimes="0;0.2;0.4;0.6;0.8;1" calcMode="discrete" dur="12.5s" repeatCount="indefinite"/></text>
+<text x="180" y="125" text-anchor="middle" font-size="18" font-weight="600" fill="#1B2430" opacity="0">mesh waits (Eulerian box)
+<animate attributeName="opacity" values="0;1;1;1;0;0" keyTimes="0;0.2;0.4;0.6;0.8;1" calcMode="discrete" dur="12.5s" repeatCount="indefinite"/></text>
+<text x="180" y="125" text-anchor="middle" font-size="16" font-weight="600" fill="#1B2430" opacity="0">top mesh moves at v_z = (h_new − h_old)/Δt
+<animate attributeName="opacity" values="0;0;0;0;1;1" keyTimes="0;0.2;0.4;0.6;0.8;1" calcMode="discrete" dur="12.5s" repeatCount="indefinite"/></text>
+<!-- vertical mesh-velocity arrows (scene 5) -->
+<g opacity="0" stroke="#5B5FC7" stroke-width="2.2" fill="none" marker-end="url(#va)">
+<path d="M115 160 L115 150"/><path d="M150 160 L150 140"/><path d="M180 160 L180 152"/><path d="M210 160 L210 140"/><path d="M245 160 L245 150"/>
+<animate attributeName="opacity" values="0;0;0;0;1;0" keyTimes="0;0.2;0.4;0.6;0.8;0.86" calcMode="discrete" dur="12.5s" repeatCount="indefinite"/>
+</g>
+
+<!-- ===== FastScape box ===== -->
+<rect x="640" y="90" width="280" height="180" rx="14" fill="#FBE9EB" stroke="#C9545C" stroke-width="2">
+<animate attributeName="stroke-width" values="2;2;5;2;2;2" keyTimes="0;0.2;0.4;0.6;0.8;1" calcMode="discrete" dur="12.5s" repeatCount="indefinite"/>
+</rect>
+<!-- regular grid: inner 7x4 nodes = ASPECT surface, outer ring = ghost nodes -->
+<g>
+<!-- ghost ring (dashed) -->
+<rect x="662" y="108" width="236" height="148" fill="none" stroke="#C9545C" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.7"/>
+<!-- inner ASPECT extent -->
+<rect x="688" y="128" width="184" height="108" fill="none" stroke="#5B5FC7" stroke-width="1.6" opacity="0.8"/>
+<!-- grid lines -->
+<path d="M662 128 H898 M662 164 H898 M662 200 H898 M662 236 H898 M688 108 V256 M724 108 V256 M760 108 V256 M796 108 V256 M832 108 V256 M868 108 V256" stroke="#E6B8BC" stroke-width="1"/>
+<!-- ghost nodes (hollow) -->
+<g fill="#FFFFFF" stroke="#C9545C" stroke-width="1.4">
+<circle cx="662" cy="108" r="3"/><circle cx="688" cy="108" r="3"/><circle cx="724" cy="108" r="3"/><circle cx="760" cy="108" r="3"/><circle cx="796" cy="108" r="3"/><circle cx="832" cy="108" r="3"/><circle cx="868" cy="108" r="3"/><circle cx="898" cy="108" r="3"/>
+<circle cx="662" cy="256" r="3"/><circle cx="688" cy="256" r="3"/><circle cx="724" cy="256" r="3"/><circle cx="760" cy="256" r="3"/><circle cx="796" cy="256" r="3"/><circle cx="832" cy="256" r="3"/><circle cx="868" cy="256" r="3"/><circle cx="898" cy="256" r="3"/>
+<circle cx="662" cy="128" r="3"/><circle cx="662" cy="164" r="3"/><circle cx="662" cy="200" r="3"/><circle cx="662" cy="236" r="3"/>
+<circle cx="898" cy="128" r="3"/><circle cx="898" cy="164" r="3"/><circle cx="898" cy="200" r="3"/><circle cx="898" cy="236" r="3"/>
+</g>
+<!-- inner nodes (filled) -->
+<g fill="#C9545C">
+<circle cx="688" cy="128" r="3"/><circle cx="724" cy="128" r="3"/><circle cx="760" cy="128" r="3"/><circle cx="796" cy="128" r="3"/><circle cx="832" cy="128" r="3"/><circle cx="868" cy="128" r="3"/>
+<circle cx="688" cy="164" r="3"/><circle cx="724" cy="164" r="3"/><circle cx="760" cy="164" r="3"/><circle cx="796" cy="164" r="3"/><circle cx="832" cy="164" r="3"/><circle cx="868" cy="164" r="3"/>
+<circle cx="688" cy="200" r="3"/><circle cx="724" cy="200" r="3"/><circle cx="760" cy="200" r="3"/><circle cx="796" cy="200" r="3"/><circle cx="832" cy="200" r="3"/><circle cx="868" cy="200" r="3"/>
+<circle cx="688" cy="236" r="3"/><circle cx="724" cy="236" r="3"/><circle cx="760" cy="236" r="3"/><circle cx="796" cy="236" r="3"/><circle cx="832" cy="236" r="3"/><circle cx="868" cy="236" r="3"/>
+</g>
+</g>
+<!-- velocity received on grid (scene 2): small up arrows on inner nodes -->
+<g opacity="0" stroke="#5B5FC7" stroke-width="1.8" fill="none" marker-end="url(#va)">
+<path d="M760 164 L760 152"/><path d="M796 164 L796 150"/><path d="M760 200 L760 188"/><path d="M796 200 L796 186"/><path d="M724 182 L724 174"/><path d="M832 182 L832 174"/>
+<animate attributeName="opacity" values="0;1;0;0;0;0" keyTimes="0;0.2;0.4;0.6;0.8;1" calcMode="discrete" dur="12.5s" repeatCount="indefinite"/>
+</g>
+<!-- river network (faint always, draws in during scene 3) -->
+<path d="M780 250 L780 205 L735 170 L705 125 M780 205 L825 160 L865 120 M735 170 L760 125 M825 160 L810 120" fill="none" stroke="#F0CBCE" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" d="M780 250 L780 205 L735 170 L705 125 M780 205 L825 160 L865 120 M735 170 L760 125 M825 160 L810 120" fill="none" stroke="#C9545C" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+<animate attributeName="stroke-dashoffset" values="1;1;0;0" keyTimes="0;0.4;0.6;1" dur="12.5s" repeatCount="indefinite"/>
+</path>
+<!-- sub-step ticks (scene 3) -->
+<g opacity="0">
+<rect x="700" y="92" width="160" height="22" rx="6" fill="#FFFFFF" stroke="#C9545C" stroke-width="1"/>
+<text x="780" y="108" text-anchor="middle" font-size="15" font-weight="600" fill="#C9545C">Δt_ASPECT = N × Δt_FS</text>
+<animate attributeName="opacity" values="0;0;1;0;0;0" keyTimes="0;0.2;0.4;0.6;0.8;1" calcMode="discrete" dur="12.5s" repeatCount="indefinite"/>
+</g>
+
+<text x="180" y="298" text-anchor="middle" font-size="18" fill="#5A6470">mechanics · 3D Eulerian mesh (ALE)</text>
+<text x="780" y="298" text-anchor="middle" font-size="18" fill="#5A6470">surface processes · regular 2D grid + ghost ring</text>
+
+<!-- packets -->
+<g opacity="0">
+<rect x="-52" y="-20" width="104" height="40" rx="20" fill="#5B5FC7"/>
+<text x="0" y="8" text-anchor="middle" font-size="22" font-weight="700" fill="#FFFFFF">vx, vy, vz</text>
+<animateMotion dur="12.5s" repeatCount="indefinite" keyPoints="0;0;1;1" keyTimes="0;0.2;0.38;1" calcMode="linear"><mpath href="#pTop"/></animateMotion>
+<animate attributeName="opacity" values="0;1;0;0;0;0" keyTimes="0;0.2;0.4;0.6;0.8;1" calcMode="discrete" dur="12.5s" repeatCount="indefinite"/>
+</g>
+<g opacity="0">
+<rect x="-40" y="-20" width="80" height="40" rx="20" fill="#C9545C"/>
+<text x="0" y="8" text-anchor="middle" font-size="22" font-weight="700" fill="#FFFFFF">h_new</text>
+<animateMotion dur="12.5s" repeatCount="indefinite" keyPoints="0;0;1;1" keyTimes="0;0.6;0.78;1" calcMode="linear"><mpath href="#pBot"/></animateMotion>
+<animate attributeName="opacity" values="0;0;0;1;0;0" keyTimes="0;0.2;0.4;0.6;0.8;1" calcMode="discrete" dur="12.5s" repeatCount="indefinite"/>
+</g>
+
+<!-- captions -->
+<g font-size="21" fill="#1B2430" text-anchor="middle">
+<text x="480" y="385" opacity="0">① ASPECT solves one Stokes step: velocity (vx, vy, vz) is read on the top boundary
+<animate attributeName="opacity" values="1;0;0;0;0;0" keyTimes="0;0.2;0.4;0.6;0.8;1" calcMode="discrete" dur="12.5s" repeatCount="indefinite"/></text>
+<text x="480" y="385" opacity="0">② Velocities are copied node by node onto FastScape's regular grid; ghost nodes copy their inner neighbour
+<animate attributeName="opacity" values="0;1;0;0;0;0" keyTimes="0;0.2;0.4;0.6;0.8;1" calcMode="discrete" dur="12.5s" repeatCount="indefinite"/></text>
+<text x="480" y="385" opacity="0">③ FastScape sub-steps Δt: advection by (vx, vy), uplift by vz, river incision, hillslope diffusion
+<animate attributeName="opacity" values="0;0;1;0;0;0" keyTimes="0;0.2;0.4;0.6;0.8;1" calcMode="discrete" dur="12.5s" repeatCount="indefinite"/></text>
+<text x="480" y="385" opacity="0">④ FastScape returns the new topography h_new (uplift + advection + erosion, all together)
+<animate attributeName="opacity" values="0;0;0;1;0;0" keyTimes="0;0.2;0.4;0.6;0.8;1" calcMode="discrete" dur="12.5s" repeatCount="indefinite"/></text>
+<g opacity="0">
+<text x="480" y="376">⑤ ASPECT moves its top mesh vertically at (h_new − h_old)/Δt, then repeats;</text>
+<text x="480" y="402">eroded and deposited material is tracked as a compositional field (sediment_age, deposition_depth)</text>
+<animate attributeName="opacity" values="0;0;0;0;1;1" keyTimes="0;0.2;0.4;0.6;0.8;1" calcMode="discrete" dur="12.5s" repeatCount="indefinite"/></g>
+</g>
+</svg>

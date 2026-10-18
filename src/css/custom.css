@@ -1,0 +1,23 @@
+/* Palette matched to the talk slides: ASPECT lavender-blue, FastScape rose. */
+:root {
+  --ifm-color-primary: #5b5fc7;
+  --ifm-color-primary-dark: #4a4ec0;
+  --ifm-color-primary-darker: #4347b6;
+  --ifm-color-primary-darkest: #373a96;
+  --ifm-color-primary-light: #6c70ce;
+  --ifm-color-primary-lighter: #7579d2;
+  --ifm-color-primary-lightest: #9497dd;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+[data-theme='dark'] {
+  --ifm-color-primary: #9b9ee6;
+  --ifm-color-primary-dark: #8488e0;
+  --ifm-color-primary-darker: #787cdc;
+  --ifm-color-primary-darkest: #5156d1;
+  --ifm-color-primary-light: #b2b4ec;
+  --ifm-color-primary-lighter: #bec0ef;
+  --ifm-color-primary-lightest: #e1e2f8;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+.markdown img { border-radius: 12px; }
