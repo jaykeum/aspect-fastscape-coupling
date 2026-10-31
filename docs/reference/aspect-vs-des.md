@@ -10,6 +10,8 @@ The [DES3D–goSPL coupling](https://geoflac.github.io/des3d/docs/tutorial/coupl
 
 ![ASPECT-FastScape vs DES3D-goSPL](/img/aspect-vs-des.svg)
 
+The figure loops through three stages: the same initial box, one tectonic step of extension, and one surface-process step. In ASPECT the dashed initial box and the current box coincide; in DES3D the current mesh ends up wider than the dashed initial box.
+
 ## Where the differences come from
 
 **The box does not widen in ASPECT.** Extension is imposed as outflow through the side walls; the top boundary moves only vertically. FastScape's grid can therefore be built once from the box extent, and horizontal transport of topography is done inside FastScape by advecting `h` with `(vx, vy)`. In DES3D the surface nodes carry the material and the whole surface widens, so goSPL's fixed mesh has to be padded around the initial surface and the DES→goSPL step is an interpolation between two meshes rather than a copy by index.

@@ -1,63 +1,156 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Side by side comparison of the ASPECT-FastScape and DES3D-goSPL coupling schemes">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Animated comparison: ASPECT keeps a fixed Eulerian box while material flows out through the sides and the top boundary moves vertically; DES3D nodes move with the material so the whole mesh widens, then goSPL erodes the surface" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo0ZDJlMzlhYy0yMDkyLTQ2MzMtYjYwMi00ZGU3YzNjZTQ5YzUAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaKRhZaJ3uHMWuMtKSpXgH8MAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDpiNmE3MDMyZi01MTkyLTRlNmEtODk4OC02YTVjYWI0ZWJjN2FscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoaWmhKKvl3V1CYOU+5GQSUAAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggjdHJRjIpekqJodmWsyY48qTEitxP98eL8NvBSGY/XHikZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaE7p0yEnOYl5eFUNRu/TTpYAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIDz7lr+LE/Oq8+izCOur9EPr/Fgxw1UMvQ8mspsRHyX/ZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GQGSZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjRkMmUzOWFjLTIwOTItNDYzMy1iNjAyLTRkZTdjM2NlNDljNS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjFjNDdlOTExLTcwMGItNGU2OS1hMTUxLTZkNjdhMjM1NmFmM3JjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCCN0clGMil6Somh2ZazJjjypMSK3E/3x4vw28FIZj9ceKJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFgg277+hfcesq0s1bYMtbTQOa6bCzfe8Xjt19Rd3nEV5yOiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggfwrml9tds6ZTLOWalvy46UYKJ0vEReClxlFCqoY+sLx0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQK2l9nBxAxmnJasyqmaNHARupKR2rnYtCJa2Mlu1v7kUw09PkWPwPtVgwzs7v4tVeL+nAxFNrTU9n89uW8/PoZA=</c2pa:manifest></metadata>
 <style>text{font-family:Calibri,"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif}</style>
-<defs><marker id="ar2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#5A6470"/></marker></defs>
+<defs>
+<marker id="arA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#5B5FC7"/></marker>
+<marker id="arD" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#2F6FB0"/></marker>
+<marker id="arS" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#C9545C"/></marker>
+<clipPath id="clipL"><rect x="100" y="40" width="300" height="182"/></clipPath>
+<clipPath id="clipR"><rect x="520" y="40" width="380" height="182"/></clipPath>
+<clipPath id="crustA"><path><animate attributeName="d" dur="10s" repeatCount="indefinite" keyTimes="0;0.1;0.5;0.8;1" calcMode="linear"
+ values="M100 220 L100 90 C140 90 160 90 190 90 C220 90 230 90 250 90 C270 90 280 90 310 90 C340 90 360 90 400 90 L400 220 Z;
+ M100 220 L100 90 C140 90 160 90 190 90 C220 90 230 90 250 90 C270 90 280 90 310 90 C340 90 360 90 400 90 L400 220 Z;
+ M100 220 L100 92 C140 92 160 78 190 80 C220 82 235 116 250 116 C265 116 280 82 310 80 C340 78 360 92 400 92 L400 220 Z;
+ M100 220 L100 92 C140 92 160 86 190 87 C220 88 235 116 250 116 C265 116 280 88 310 87 C340 86 360 92 400 92 L400 220 Z;
+ M100 220 L100 92 C140 92 160 86 190 87 C220 88 235 116 250 116 C265 116 280 88 310 87 C340 86 360 92 400 92 L400 220 Z"/>
+</path></clipPath>
+<clipPath id="crustD"><path><animate attributeName="d" dur="10s" repeatCount="indefinite" keyTimes="0;0.1;0.5;0.8;1" calcMode="linear"
+ values="M560 220 L560 90 C600 90 620 90 650 90 C680 90 690 90 710 90 C730 90 740 90 770 90 C800 90 820 90 860 90 L860 220 Z;
+ M560 220 L560 90 C600 90 620 90 650 90 C680 90 690 90 710 90 C730 90 740 90 770 90 C800 90 820 90 860 90 L860 220 Z;
+ M560 220 L560 96 C600 96 620 82 650 84 C680 86 695 118 710 118 C725 118 740 86 770 84 C800 82 820 96 860 96 L860 220 Z;
+ M560 220 L560 96 C600 96 620 90 650 91 C680 92 695 118 710 118 C725 118 740 92 770 91 C800 90 820 96 860 96 L860 220 Z;
+ M560 220 L560 96 C600 96 620 90 650 91 C680 92 695 118 710 118 C725 118 740 92 770 91 C800 90 820 96 860 96 L860 220 Z"/>
+</path></clipPath>
+</defs>
 <rect width="960" height="560" rx="16" fill="#F7F6F2"/>
 
-<text x="250" y="42" text-anchor="middle" font-size="24" font-weight="700" fill="#5B5FC7">ASPECT + FastScape</text>
-<text x="710" y="42" text-anchor="middle" font-size="24" font-weight="700" fill="#2F6FB0">DES3D + goSPL</text>
+<text x="250" y="36" text-anchor="middle" font-size="24" font-weight="700" fill="#5B5FC7">ASPECT + FastScape</text>
+<text x="710" y="36" text-anchor="middle" font-size="24" font-weight="700" fill="#2F6FB0">DES3D + goSPL</text>
 <line x1="480" y1="20" x2="480" y2="540" stroke="#D3D8DE" stroke-width="1.5" stroke-dasharray="6 5"/>
 
-<!-- LEFT: Eulerian box -->
+<!-- scene chip -->
 <g>
-<path d="M60 220 L60 92 C150 92 190 60 250 60 C310 60 350 92 440 92 L440 220 Z" fill="#ECECF9" stroke="#5B5FC7" stroke-width="2"/>
-<rect x="60" y="70" width="380" height="150" fill="none" stroke="#B5BCC5" stroke-width="1" stroke-dasharray="4 4"/>
-<!-- fixed box edges emphasised -->
-<path d="M60 92 V220 M440 92 V220" stroke="#5B5FC7" stroke-width="4"/>
-<path d="M60 130 H440 M60 160 H440 M60 190 H440 M100 70 V220 M140 70 V220 M180 70 V220 M220 70 V220 M260 70 V220 M300 70 V220 M340 70 V220 M380 70 V220 M420 70 V220" stroke="#B9BBE8" stroke-width="1"/>
-<!-- deformed top surface -->
-<path d="M60 92 C150 92 190 60 250 60 C310 60 350 92 440 92" fill="none" stroke="#5B5FC7" stroke-width="3"/>
-<text x="250" y="84" text-anchor="middle" font-size="12" fill="#8A93A0">dashed: initial box</text>
-<!-- outflow arrows at sides -->
-<path d="M58 140 L30 140" stroke="#5A6470" stroke-width="2" marker-end="url(#ar2)"/>
-<path d="M442 140 L470 140" stroke="#5A6470" stroke-width="2" marker-end="url(#ar2)"/>
-<text x="250" y="245" text-anchor="middle" font-size="15" fill="#4A5563">box edges stay put; material flows out through the sides</text>
-<text x="250" y="265" text-anchor="middle" font-size="15" fill="#4A5563">top boundary moves only vertically (mesh velocity, z only)</text>
-</g>
-<!-- RIGHT: Lagrangian mesh widening -->
-<g>
-<rect x="520" y="70" width="380" height="150" fill="none" stroke="#B5BCC5" stroke-width="1" stroke-dasharray="4 4"/>
-<text x="540" y="212" font-size="12" fill="#8A93A0">dashed: padded goSPL mesh</text>
-<path d="M560 220 L560 92 C640 92 680 60 710 60 C740 60 780 92 860 92 L860 220 Z" fill="#EAF1F8" stroke="#2F6FB0" stroke-width="2"/>
-<path d="M560 130 L860 130 M560 170 L860 170 M600 220 L605 90 M650 220 L655 75 M700 220 L703 62 M750 220 L748 64 M800 220 L805 85" stroke="#B7CDE3" stroke-width="1"/>
-<path d="M560 140 L535 140" stroke="#2F6FB0" stroke-width="2" marker-end="url(#ar2)"/>
-<path d="M860 140 L885 140" stroke="#2F6FB0" stroke-width="2" marker-end="url(#ar2)"/>
-<text x="710" y="245" text-anchor="middle" font-size="15" fill="#4A5563">nodes carry the material; the whole mesh widens and remeshes</text>
-<text x="710" y="265" text-anchor="middle" font-size="15" fill="#4A5563">goSPL mesh is fixed, so it needs padding around the initial surface</text>
+<rect x="400" y="48" width="160" height="24" rx="12" fill="#E8E6DF"/>
+<text x="480" y="65" text-anchor="middle" font-size="13" font-weight="600" fill="#4A5563" opacity="0">t = 0: same initial box
+<animate attributeName="opacity" values="1;0;0;0" keyTimes="0;0.1;0.5;1" calcMode="discrete" dur="10s" repeatCount="indefinite"/></text>
+<text x="480" y="65" text-anchor="middle" font-size="13" font-weight="600" fill="#4A5563" opacity="0">Extension: tectonic step
+<animate attributeName="opacity" values="0;1;0;0" keyTimes="0;0.1;0.5;1" calcMode="discrete" dur="10s" repeatCount="indefinite"/></text>
+<text x="480" y="65" text-anchor="middle" font-size="13" font-weight="600" fill="#4A5563" opacity="0">Surface processes
+<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.1;0.5;1" calcMode="discrete" dur="10s" repeatCount="indefinite"/></text>
+<g opacity="0"><rect x="578" y="54" width="12" height="12" rx="2" fill="#E9A1A6" stroke="#C9545C" stroke-width="1"/><text x="596" y="65" font-size="13" font-weight="600" fill="#4A5563">Sediment</text>
+<animate attributeName="opacity" values="0;1;1;1" keyTimes="0;0.1;0.5;1" calcMode="discrete" dur="10s" repeatCount="indefinite"/></g>
 </g>
 
+<!-- ================= LEFT: Eulerian box (edges fixed) ================= -->
+<!-- initial box, dashed (identical to the current box: it never changes) -->
+<g clip-path="url(#clipL)">
+<!-- sediment: a slab under y=108 drawn before the crust, so only the part above the surface shows -->
+<rect x="196" y="130" width="108" height="30" fill="#E9A1A6" stroke="#C9545C" stroke-width="1">
+<animate attributeName="y" values="130;90;110;107;107" keyTimes="0;0.1;0.5;0.8;1" calcMode="linear" dur="10s" repeatCount="indefinite"/>
+</rect>
+<!-- crust: surface flat -> rift basin with shoulders -> eroded shoulders -->
+<path fill="#ECECF9" stroke="#5B5FC7" stroke-width="2.5">
+<animate attributeName="d" dur="10s" repeatCount="indefinite" keyTimes="0;0.1;0.5;0.8;1" calcMode="linear"
+ values="M100 220 L100 90 C140 90 160 90 190 90 C220 90 230 90 250 90 C270 90 280 90 310 90 C340 90 360 90 400 90 L400 220 Z;
+ M100 220 L100 90 C140 90 160 90 190 90 C220 90 230 90 250 90 C270 90 280 90 310 90 C340 90 360 90 400 90 L400 220 Z;
+ M100 220 L100 92 C140 92 160 78 190 80 C220 82 235 116 250 116 C265 116 280 82 310 80 C340 78 360 92 400 92 L400 220 Z;
+ M100 220 L100 92 C140 92 160 86 190 87 C220 88 235 116 250 116 C265 116 280 88 310 87 C340 86 360 92 400 92 L400 220 Z;
+ M100 220 L100 92 C140 92 160 86 190 87 C220 88 235 116 250 116 C265 116 280 88 310 87 C340 86 360 92 400 92 L400 220 Z"/>
+</path>
+<!-- Eulerian mesh lines: never move -->
+<path clip-path="url(#crustA)" d="M100 122 H400 M100 155 H400 M100 188 H400 M140 60 V220 M180 60 V220 M220 60 V220 M260 60 V220 M300 60 V220 M340 60 V220 M380 60 V220" stroke="#B9BBE8" stroke-width="1" opacity="0.95"/>
+</g>
+<!-- fixed side walls, emphasised -->
+<path d="M100 90 V220 M400 90 V220" stroke="#5B5FC7" stroke-width="4"/>
+<rect x="100" y="90" width="300" height="130" fill="none" stroke="#6B7480" stroke-width="1.6" stroke-dasharray="5 4"/>
+<!-- material outflow through the sides (extension scene) -->
+<g opacity="0" stroke="#5B5FC7" stroke-width="2.2" fill="none" marker-end="url(#arA)">
+<path d="M98 130 L62 130"/><path d="M98 175 L62 175"/><path d="M402 130 L438 130"/><path d="M402 175 L438 175"/>
+<animate attributeName="opacity" values="0;1;0;0" keyTimes="0;0.1;0.5;1" calcMode="discrete" dur="10s" repeatCount="indefinite"/>
+</g>
+<text x="250" y="238" text-anchor="middle" font-size="12" fill="#8A93A0" opacity="0">Material leaves through the fixed walls; mesh lines do not move
+<animate attributeName="opacity" values="0;1;0;0" keyTimes="0;0.1;0.5;1" calcMode="discrete" dur="10s" repeatCount="indefinite"/></text>
+<!-- vertical mesh velocity on the top boundary (surface-process scene) -->
+<g opacity="0" stroke="#C9545C" stroke-width="2.2" fill="none" marker-end="url(#arS)">
+<path d="M190 74 L190 84"/><path d="M310 74 L310 84"/><path d="M250 128 L250 112"/>
+<animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.1;0.5;0.8;1" calcMode="discrete" dur="10s" repeatCount="indefinite"/>
+</g>
+<text x="250" y="238" text-anchor="middle" font-size="12" fill="#8A93A0" opacity="0">FastScape returns h_new; top boundary moves at v_z = (h_new − h_old)/Δt
+<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.1;0.5;1" calcMode="discrete" dur="10s" repeatCount="indefinite"/></text>
+<text x="250" y="238" text-anchor="middle" font-size="12" fill="#8A93A0" opacity="0">Dashed: initial box (same as the current box)
+<animate attributeName="opacity" values="1;0;0;0" keyTimes="0;0.1;0.5;1" calcMode="discrete" dur="10s" repeatCount="indefinite"/></text>
+<text x="250" y="258" text-anchor="middle" font-size="15" fill="#4A5563">Box edges stay put; material flows out through the sides</text>
+<text x="250" y="277" text-anchor="middle" font-size="15" fill="#4A5563">Top boundary moves only vertically (mesh velocity, z only)</text>
+
+<!-- ================= RIGHT: Lagrangian mesh (nodes move, box widens) ================= -->
+<!-- initial box, dashed: stays where it was -->
+<g clip-path="url(#clipR)">
+<!-- everything inside this group stretches about x = 710: nodes carry the material -->
+<g transform="translate(710 0)"><g><animateTransform attributeName="transform" type="scale" dur="10s" repeatCount="indefinite" keyTimes="0;0.1;0.5;0.8;1" calcMode="linear" values="1 1;1 1;1.2 1;1.2 1;1.2 1"/><g transform="translate(-710 0)">
+<rect x="665" y="132" width="90" height="30" fill="#E9A1A6" stroke="#C9545C" stroke-width="1" vector-effect="non-scaling-stroke">
+<animate attributeName="y" values="132;90;112;109;109" keyTimes="0;0.1;0.5;0.8;1" calcMode="linear" dur="10s" repeatCount="indefinite"/>
+</rect>
+<path fill="#EAF1F8" stroke="#2F6FB0" stroke-width="2.5" vector-effect="non-scaling-stroke">
+<animate attributeName="d" dur="10s" repeatCount="indefinite" keyTimes="0;0.1;0.5;0.8;1" calcMode="linear"
+ values="M560 220 L560 90 C600 90 620 90 650 90 C680 90 690 90 710 90 C730 90 740 90 770 90 C800 90 820 90 860 90 L860 220 Z;
+ M560 220 L560 90 C600 90 620 90 650 90 C680 90 690 90 710 90 C730 90 740 90 770 90 C800 90 820 90 860 90 L860 220 Z;
+ M560 220 L560 96 C600 96 620 82 650 84 C680 86 695 118 710 118 C725 118 740 86 770 84 C800 82 820 96 860 96 L860 220 Z;
+ M560 220 L560 96 C600 96 620 90 650 91 C680 92 695 118 710 118 C725 118 740 92 770 91 C800 90 820 96 860 96 L860 220 Z;
+ M560 220 L560 96 C600 96 620 90 650 91 C680 92 695 118 710 118 C725 118 740 92 770 91 C800 90 820 96 860 96 L860 220 Z"/>
+</path>
+<!-- Lagrangian mesh: unstructured triangles that stretch with the material -->
+<path clip-path="url(#crustD)" d="M705.7 120.5 L748.3 127.0 M672.5 220.0 L708.9 181.8 M626.5 187.2 L663.9 189.1 M560.0 188.0 L604.6 195.1 M793.6 125.1 L825.3 123.0 M597.5 220.0 L560.0 188.0 M792.3 161.2 L782.8 180.7 M706.1 158.5 L744.0 150.0 M626.9 153.9 L675.2 118.0 M635.0 90.0 L675.2 118.0 M710.0 220.0 L708.9 181.8 M822.5 220.0 L860.0 188.0 M747.5 90.0 L748.3 127.0 M785.0 220.0 L820.8 187.4 M560.0 155.0 L560.0 188.0 M792.3 161.2 L820.0 150.1 M860.0 220.0 L860.0 188.0 M597.5 90.0 L635.0 90.0 M785.0 90.0 L748.3 127.0 M822.5 90.0 L825.3 123.0 M598.4 125.7 L626.9 153.9 M782.8 180.7 L820.8 187.4 M825.3 123.0 L820.0 150.1 M708.9 181.8 L744.0 150.0 M860.0 90.0 L825.3 123.0 M675.7 156.6 L705.7 120.5 M597.5 220.0 L604.6 195.1 M635.0 220.0 L663.9 189.1 M597.5 90.0 L628.3 116.7 M593.7 155.2 L626.5 187.2 M635.0 220.0 L672.5 220.0 M745.5 195.9 L782.8 180.7 M560.0 90.0 L597.5 90.0 M675.7 156.6 L708.9 181.8 M635.0 90.0 L628.3 116.7 M860.0 155.0 L820.0 150.1 M560.0 220.0 L597.5 220.0 M860.0 90.0 L860.0 122.0 M747.5 90.0 L705.7 120.5 M560.0 188.0 L593.7 155.2 M626.9 153.9 L663.9 189.1 M672.5 220.0 L710.0 220.0 M598.4 125.7 L593.7 155.2 M705.7 120.5 L744.0 150.0 M597.5 220.0 L635.0 220.0 M860.0 188.0 L820.8 187.4 M560.0 90.0 L560.0 122.0 M675.2 118.0 L675.7 156.6 M597.5 90.0 L598.4 125.7 M593.7 155.2 L604.6 195.1 M635.0 90.0 L672.5 90.0 M822.5 90.0 L860.0 90.0 M675.7 156.6 L663.9 189.1 M672.5 220.0 L663.9 189.1 M792.3 161.2 L820.8 187.4 M747.5 90.0 L785.0 90.0 M628.3 116.7 L626.9 153.9 M748.3 127.0 L792.3 161.2 M675.2 118.0 L705.7 120.5 M710.0 90.0 L705.7 120.5 M593.7 155.2 L626.9 153.9 M672.5 90.0 L710.0 90.0 M860.0 122.0 L825.3 123.0 M747.5 220.0 L745.5 195.9 M604.6 195.1 L626.5 187.2 M560.0 155.0 L593.7 155.2 M560.0 122.0 L593.7 155.2 M785.0 220.0 L782.8 180.7 M860.0 155.0 L825.3 123.0 M628.3 116.7 L675.2 118.0 M747.5 220.0 L785.0 220.0 M626.9 153.9 L626.5 187.2 M822.5 90.0 L793.6 125.1 M744.0 150.0 L782.8 180.7 M785.0 90.0 L822.5 90.0 M710.0 90.0 L747.5 90.0 M793.6 125.1 L820.0 150.1 M626.9 153.9 L675.7 156.6 M635.0 220.0 L626.5 187.2 M598.4 125.7 L628.3 116.7 M560.0 122.0 L560.0 155.0 M672.5 90.0 L675.2 118.0 M710.0 220.0 L747.5 220.0 M860.0 122.0 L860.0 155.0 M748.3 127.0 L744.0 150.0 M710.0 90.0 L675.2 118.0 M710.0 220.0 L745.5 195.9 M822.5 220.0 L860.0 220.0 M785.0 220.0 L745.5 195.9 M708.9 181.8 L745.5 195.9 M822.5 220.0 L820.8 187.4 M675.7 156.6 L706.1 158.5 M748.3 127.0 L793.6 125.1 M785.0 90.0 L793.6 125.1 M744.0 150.0 L745.5 195.9 M663.9 189.1 L708.9 181.8 M705.7 120.5 L706.1 158.5 M820.0 150.1 L820.8 187.4 M560.0 122.0 L598.4 125.7 M860.0 155.0 L860.0 188.0 M793.6 125.1 L792.3 161.2 M706.1 158.5 L708.9 181.8 M635.0 220.0 L604.6 195.1 M860.0 155.0 L820.8 187.4 M744.0 150.0 L792.3 161.2 M597.5 90.0 L560.0 122.0 M785.0 220.0 L822.5 220.0 M560.0 220.0 L560.0 188.0" stroke="#A9C3DC" stroke-width="1" fill="none" vector-effect="non-scaling-stroke" opacity="0.95"/>
+<!-- nodes -->
+<g fill="#2F6FB0" clip-path="url(#crustD)"><circle cx="560.0" cy="122.0" r="2.4"/><circle cx="860.0" cy="122.0" r="2.4"/><circle cx="560.0" cy="155.0" r="2.4"/><circle cx="860.0" cy="155.0" r="2.4"/><circle cx="560.0" cy="188.0" r="2.4"/><circle cx="860.0" cy="188.0" r="2.4"/><circle cx="598.4" cy="125.7" r="2.4"/><circle cx="593.7" cy="155.2" r="2.4"/><circle cx="604.6" cy="195.1" r="2.4"/><circle cx="628.3" cy="116.7" r="2.4"/><circle cx="626.9" cy="153.9" r="2.4"/><circle cx="626.5" cy="187.2" r="2.4"/><circle cx="675.2" cy="118.0" r="2.4"/><circle cx="675.7" cy="156.6" r="2.4"/><circle cx="663.9" cy="189.1" r="2.4"/><circle cx="705.7" cy="120.5" r="2.4"/><circle cx="706.1" cy="158.5" r="2.4"/><circle cx="708.9" cy="181.8" r="2.4"/><circle cx="748.3" cy="127.0" r="2.4"/><circle cx="744.0" cy="150.0" r="2.4"/><circle cx="745.5" cy="195.9" r="2.4"/><circle cx="793.6" cy="125.1" r="2.4"/><circle cx="792.3" cy="161.2" r="2.4"/><circle cx="782.8" cy="180.7" r="2.4"/><circle cx="825.3" cy="123.0" r="2.4"/><circle cx="820.0" cy="150.1" r="2.4"/><circle cx="820.8" cy="187.4" r="2.4"/></g>
+<!-- side walls move with the nodes -->
+<path d="M560 90 V220 M860 90 V220" stroke="#2F6FB0" stroke-width="4" vector-effect="non-scaling-stroke">
+<animate attributeName="d" dur="10s" repeatCount="indefinite" keyTimes="0;0.1;0.5;0.8;1" calcMode="linear"
+ values="M560 90 V220 M860 90 V220;M560 90 V220 M860 90 V220;M560 96 V220 M860 96 V220;M560 96 V220 M860 96 V220;M560 96 V220 M860 96 V220"/>
+</path>
+</g></g></g>
+</g>
+<rect x="560" y="90" width="300" height="130" fill="none" stroke="#6B7480" stroke-width="1.6" stroke-dasharray="5 4"/>
+<!-- node motion arrows (extension scene): walls move outward -->
+<g opacity="0" stroke="#2F6FB0" stroke-width="2.2" fill="none" marker-end="url(#arD)">
+<path d="M556 130 L524 130"/><path d="M556 175 L524 175"/><path d="M864 130 L896 130"/><path d="M864 175 L896 175"/>
+<animate attributeName="opacity" values="0;1;0;0" keyTimes="0;0.1;0.5;1" calcMode="discrete" dur="10s" repeatCount="indefinite"/>
+</g>
+<text x="710" y="238" text-anchor="middle" font-size="12" fill="#8A93A0" opacity="0">Nodes move outward with the material; the box widens past the dashed initial box
+<animate attributeName="opacity" values="0;1;0;0" keyTimes="0;0.1;0.5;1" calcMode="discrete" dur="10s" repeatCount="indefinite"/></text>
+<!-- erosion arrows (surface-process scene) -->
+<g opacity="0" stroke="#C9545C" stroke-width="2.2" fill="none" marker-end="url(#arS)">
+<path d="M638 74 L638 84"/><path d="M782 74 L782 84"/><path d="M710 130 L710 114"/>
+<animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.1;0.5;0.8;1" calcMode="discrete" dur="10s" repeatCount="indefinite"/>
+</g>
+<text x="710" y="238" text-anchor="middle" font-size="12" fill="#8A93A0" opacity="0">goSPL returns erosion and deposition only; the uplift already happened in DES
+<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.1;0.5;1" calcMode="discrete" dur="10s" repeatCount="indefinite"/></text>
+<text x="710" y="238" text-anchor="middle" font-size="12" fill="#8A93A0" opacity="0">Dashed: initial box (the padded goSPL mesh must cover beyond it)
+<animate attributeName="opacity" values="1;0;0;0" keyTimes="0;0.1;0.5;1" calcMode="discrete" dur="10s" repeatCount="indefinite"/></text>
+<text x="710" y="258" text-anchor="middle" font-size="15" fill="#4A5563">Nodes carry the material; the whole mesh widens and remeshes</text>
+<text x="710" y="277" text-anchor="middle" font-size="15" fill="#4A5563">goSPL mesh is fixed, so it needs padding around the initial surface</text>
+
 <!-- comparison table -->
-<g font-size="16" fill="#1B2430">
+<path d="M30 292 H930" stroke="#D3D8DE" stroke-width="1"/>
+<g font-size="14.5" fill="#1B2430">
 <g font-weight="700" fill="#5A6470">
-<text x="40" y="305">Tectonic mesh</text><text x="40" y="340">Surface grid</text><text x="40" y="375">Coupling cadence</text><text x="40" y="410">Velocity sent</text><text x="40" y="445">Returned quantity</text><text x="40" y="480">Lateral motion</text><text x="40" y="515">Boundary handling</text>
+<text x="36" y="316">Tectonic domain</text><text x="36" y="350">Landscape domain</text><text x="36" y="384">How often coupled</text><text x="36" y="418">Velocity sent</text><text x="36" y="452">Returned quantity</text><text x="36" y="486">Data transfer</text><text x="36" y="520">Boundary handling</text>
 </g>
 <g>
-<text x="200" y="305">Eulerian / ALE hexahedra (Q2-Q1)</text>
-<text x="200" y="340">regular, fixed, built from box extent</text>
-<text x="200" y="375">every ASPECT step; FastScape sub-steps</text>
-<text x="200" y="410">instantaneous (vx, vy, vz)</text>
-<text x="200" y="445">h_new → v_z = (h_new − h_old)/Δt (total)</text>
-<text x="200" y="480">advection inside FastScape (vx, vy)</text>
-<text x="200" y="515">one ghost ring; BC applied there</text>
+<text x="170" y="310">Eulerian, structured rectangular mesh;</text><text x="170" y="326">cells refined or coarsened, nodes stay</text>
+<text x="170" y="350">Structured rectangular mesh, fixed all run</text>
+<text x="170" y="384">Every ASPECT step, with FastScape sub-steps</text>
+<text x="170" y="418">Velocity of the current step</text>
+<text x="170" y="446">New topography → vertical mesh velocity</text><text x="170" y="462">(uplift + erosion)</text>
+<text x="170" y="486">Copied node to node (same points)</text>
+<text x="170" y="514">Boundary condition applied on</text><text x="170" y="530">ghost nodes around the mesh</text>
 </g>
 <g>
-<text x="500" y="305">Lagrangian tetrahedra (P1), remeshing</text>
-<text x="500" y="340">unstructured, fixed, padded, perturbed</text>
-<text x="500" y="375">every N DES steps or every T years</text>
-<text x="500" y="410">time-averaged Δcoord / Δt</text>
-<text x="500" y="445">Δh = erosion + diffusion only (uplift removed)</text>
-<text x="500" y="480">nodes move; goSPL grid interpolates</text>
-<text x="500" y="515">padding fraction; letter BC (o / f / w)</text>
+<text x="500" y="310">Lagrangian, unstructured triangular mesh;</text><text x="500" y="326">nodes move, remeshed when distorted</text>
+<text x="500" y="350">Unstructured triangular mesh, fixed, padded and perturbed</text>
+<text x="500" y="384">Every N DES steps or every t years</text>
+<text x="500" y="418">Δx / Δt, node displacement since the last coupling</text>
+<text x="500" y="446">Erosion only</text><text x="500" y="462">(uplift already in the DES nodes)</text>
+<text x="500" y="486">IDW interpolation, both ways</text>
+<text x="500" y="520">Padded mesh; each side open, fixed or wall</text>
 </g>
 </g>
-<path d="M30 285 H930" stroke="#D3D8DE" stroke-width="1"/>
 </svg>
